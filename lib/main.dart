@@ -145,12 +145,12 @@ class _MyHomePageState extends State<MyHomePage> {
               textAlign: TextAlign.start,
             ),
           ),
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(Icons.arrow_back_ios),
-          ),
+          // leading: IconButton(
+          //   onPressed: () {
+          //     Navigator.pop(context);
+          //   },
+          //   icon: const Icon(Icons.arrow_back_ios),
+          // ),
           actions: <Widget>[
             IconButton(
               icon: const Icon(Icons.save_alt),
@@ -159,9 +159,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        // drawer: Drawer(
-        //   child: EpubViewTableOfContents(controller: _epubReaderController),
-        // ),
+        drawer: Drawer(
+          child: EpubViewTableOfContents(controller: _epubReaderController),
+        ),
         body: EpubView(
           builders: EpubViewBuilders<DefaultBuilderOptions>(
             options: const DefaultBuilderOptions(),
